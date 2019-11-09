@@ -3,6 +3,7 @@
   value:
     name: suse-binary-buildpack
     release: suse-binary-buildpack
+    file: /var/vcap/data/shared-packages/suse-binary-buildpack/packages/binary-buildpack/binary-buildpack/binary-buildpack-v1.0.33.1-1.1-a53fa79d
     properties:
       quarks:
         pre_render_scripts:
