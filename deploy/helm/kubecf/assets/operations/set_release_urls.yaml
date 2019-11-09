@@ -182,6 +182,6 @@
 
 - type: replace
   path: /releases/name=suse-binary-buildpack/url
-  value: {{ .Values.releases.sle.url | quote }}
+  value: {{ .Values.releases.suse.url | quote }}
 - type: remove
   path: /releases/name=suse-binary-buildpack/sha1

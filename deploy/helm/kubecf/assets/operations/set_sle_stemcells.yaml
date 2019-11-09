@@ -3,6 +3,6 @@
 - type: replace
   path: /releases/name=suse-binary-buildpack/stemcell?
   value:
-    alias: sle
-    os: {{ .Values.releases.sle.stemcell.os | quote }}
-    version: {{ .Values.releases.sle.stemcell.version | quote }}
+    alias: suse
+    os: {{ .Values.releases.suse.stemcell.os | quote }}
+    version: {{ .Values.releases.suse.stemcell.version | quote }}
