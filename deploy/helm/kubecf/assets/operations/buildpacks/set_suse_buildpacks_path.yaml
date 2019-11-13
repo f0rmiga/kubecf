@@ -1,0 +1,17 @@
+- type: replace
+  path: /instance_groups/name=api/jobs/-
+  value:
+    name: binary-buildpack
+    release: suse-binary-buildpack
+
+# Copy buildpacks to shared-packages.
+- type: replace
+  path: /instance_groups/name=api/jobs/name=cloud_controller_ng/properties/cc/install_buildpacks/-
+  value:
+  - name: suse_binary_buildpack
+    file: /var/vcap/data/shared-packages/suse-binary-buildpack/packages/suse-binary-buildpack/suse-binary-buildpack/suse-binary-buildpack-v1.0.33.1-1.1-a53fa79d.zip
+
+# Add empty BPM processes to buildpacks.
+- type: replace
+  path: /instance_groups/name=api/jobs/name=suse-binary-buildpack/properties?/quarks/bpm/processes
+  value: []
