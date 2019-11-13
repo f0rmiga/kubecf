@@ -1,7 +1,12 @@
 - type: replace
-  path: /releases/-
+  path: /releases/name=binary-buildpack
   value:
-    name: suse-binary-buildpack
-    url: "https://s3.amazonaws.com/suse-final-releases/binary-buildpack-release-1.0.33.1.tgz"
+    name: "binary-buildpack"
+    #url: "https://s3.amazonaws.com/suse-final-releases/binary-buildpack-release-1.0.33.1.tgz"
     version: "1.0.33.1"
     sha1: "efc52da5fdeccfc407bd9bcf1139d222bac394b2"
+    url: registry.suse.com/cap-staging
+    stemcell:
+      alias: suse
+      os: SLE-12SP4
+      version: 5.g4792c5a-0.230-7.0.0_360.g0ec8d681
