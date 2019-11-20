@@ -18,6 +18,9 @@ data:
 {{- end -}}
 
 {{- $root := . -}}
+{{- range $path, $bytes := .Files.Glob "assets/operations/stacks/*" }}
+{{ include "kubecf.ops" (dict "Root" $root "Path" $path) }}
+{{- end }}
 {{- if .Values.features.suse_buildpacks }}
 {{ include "kubecf.ops" (dict "Root" $root "Path" "assets/operations/buildpacks/set_suse_buildpacks.yaml") }}
 {{- end }}

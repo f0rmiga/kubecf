@@ -179,3 +179,9 @@
   value: {{ .Values.releases.defaults.url | quote }}
 - type: remove
   path: /releases/name=cf-cli/sha1
+
+- type: replace
+  path: /releases/name=sle15/url
+  value: {{ .Values.releases.defaults.url | quote }}
+- type: remove
+  path: /releases/name=sle15/sha1

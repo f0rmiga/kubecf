@@ -1,0 +1,25 @@
+- type: replace
+  path: /releases/-
+  value:
+    name: sle15
+    url: "https://s3.amazonaws.com/suse-final-releases/sle15-release-10.65.tgz"
+    version: "10.65"
+    sha1: "0fbad8a3c3478df659c4fd7717edb0b079a5eb6b"
+
+- type: replace
+  path: /instance_groups/name=diego-cell/jobs/-
+  value:
+    name: sle15-rootfs-setup
+    release: sle15
+    properties:
+      quarks:
+        pre_render_scripts:
+          jobs: []
+
+- type: replace
+  path: /instance_groups/name=diego-cell/jobs/name=sle15-rootfs-setup/properties/quarks?/bpm/processes
+  value: []
+
+# - type: replace
+#   path: /instance_groups/name=sle15/jobs/name=sle15-rootfs/properties/trusted_certs?
+#   value: false

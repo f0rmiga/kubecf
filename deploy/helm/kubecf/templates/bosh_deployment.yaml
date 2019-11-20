@@ -23,6 +23,10 @@ spec:
   - name: ops-use-bits-service
     type: configmap
 {{- end }}
+{{- range $path, $bytes := .Files.Glob "assets/operations/stacks/*" }}
+  - name: {{ include "kubecf.ops-name" $path }}
+    type: configmap
+{{- end }}
 {{- range $path, $bytes := .Files.Glob "assets/operations/instance_groups/*" }}
   - name: {{ include "kubecf.ops-name" $path }}
     type: configmap
