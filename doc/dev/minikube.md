@@ -75,17 +75,6 @@ echo "system_domain: $(minikube ip).xip.io" \
   > "$(bazel info workspace)/dev/kubecf/system_domain_values.yaml"
 ```
 
-### Storage class For Brain Tests
-
-When intending to run the brain acceptance tests it is also necessary
-to define the `brain_storage_class`. For the Minikube foundation we
-have to specify it as:
-
-```sh
-echo "brain_storage_class: hostpath" \
-  > "$(bazel info workspace)/dev/kubecf/brain_test_values.yaml"
-```
-
 ### Deployment and Tear-down
 
 The Kubecf Bazel workspace contains targets to deploy and/or tear-down

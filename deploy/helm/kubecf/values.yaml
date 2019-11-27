@@ -1,9 +1,6 @@
 system_domain: ~
 deployment_name: kubecf
 
-# The storage class used for by the brain acceptance tests.
-brain_storage_class: ~
-
 # Set or override job properties. The first level of the map is the instance group name. The second
 # level of the map is the job name. E.g.:
 #  properties:
@@ -30,6 +27,9 @@ releases:
   bits-service:
     stemcell:
       version: 36.g03b4653-30.80-7.0.0_348.gc8fb3864
+  brain-tests:
+    stemcell:
+      version: 36.g03b4653-30.80-7.0.0_367.g6b06e343
   capi:
     version: 1.83.0
     stemcell:
