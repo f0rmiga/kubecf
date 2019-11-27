@@ -16,7 +16,7 @@
     - name: acceptance-tests-brain
       properties:
         acceptance_tests_brain:
-	  domain:        ((system_domain))
+          domain:        ((system_domain))
           apps_domain:   ((system_domain))
           namespace:     {{ .Release.Namespace }}
           org:           test-brain-org
