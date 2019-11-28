@@ -3,7 +3,7 @@
   value:
     name: brain-tests
     url: {{ include "kubecf.releaseURLLookup" (list .Values.releases "brain-tests") }}
-    version: v0.0.3
+    version: v0.0.4
     stemcell: {{ include "kubecf.stemcellLookup" (list .Values.releases "brain-tests") }}
 
 - path: /instance_groups/-
@@ -26,7 +26,7 @@
           tcp_domain:    tcp.((system_domain))
           user:          admin
         smoke_tests:
-          api:                 https://api.((system_domain))
+          api:                 api.((system_domain))
           apps_domain:         ((system_domain))
           autoscaler_endpoint: https://autoscaler.((system_domain))
           password:            ((cf_admin_password))
