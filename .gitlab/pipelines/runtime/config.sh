@@ -8,4 +8,5 @@ export SYSTEM_DOMAIN="k3s-ci.kubecf.aws.howdoi.website"
 : "${EIRINI_ENABLED:=false}"
 export EIRINI_ENABLED
 export KUBECF_CHART_TARGET="//deploy/helm/kubecf:chart"
+export KUBECF_BUNDLE_TARGET="//deploy/bundle:*"
 export BOSHDEPLOYMENT_CRD="boshdeployments.quarks.cloudfoundry.org"
