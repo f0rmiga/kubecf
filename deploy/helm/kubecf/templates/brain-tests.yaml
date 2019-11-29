@@ -200,7 +200,7 @@ metadata:
 subjects:
 - kind: "ServiceAccount"
   name: "{{ .Values.deployment_name }}-tests-brain"
-  namespace: "~"
+  namespace: {{ .Release.Namespace | quote }}
 roleRef:
   kind: "ClusterRole"
   apiGroup: "rbac.authorization.k8s.io"
